@@ -1,0 +1,176 @@
+.movie-card {
+  display: flex;
+  gap: 1rem;
+  justify-items: center;
+  background-color: #B9B4C7;
+  padding: 1rem;
+  border-radius: 1rem;
+  max-width: 500px; /* Adjust this value as needed */
+  margin: 0 auto;
+}
+.movie-card img {
+  width: 85%;
+}
+.movie-card .movie-data {
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.movie-card .movie-data > * {
+  margin: 0;
+}
+.movie-card .movie-data .movie-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+.movie-card .movie-data .more-info-button {
+  background-color: #D4ECDD;
+  font-size: 12px;
+  height: 2rem;
+  border: 2px solid #352F44;
+  border-radius: 1rem;
+}
+.movie-card .movie-data .more-info-button > * {
+  color: #352F44;
+}
+.movie-card .movie-data .more-info-button:hover {
+  background-color: #D4ECDD;
+}
+.movie-card .movie-data .release-rating {
+  display: flex;
+  max-width: 18.5rem;
+}
+.movie-card .movie-data .release-rating > * {
+  display: flex;
+  flex-direction: column;
+}
+.movie-card .movie-data .release-rating > * > * {
+  margin: 0;
+}
+.movie-card .movie-data .release-rating .release-rating-labels {
+  align-items: flex-start;
+}
+.movie-card .movie-data .release-rating .release-rating-values {
+  align-items: flex-end;
+}
+.movie-card .movie-data .favorite-watchlist {
+  display: flex;
+  justify-content: space-evenly;
+}
+.movie-card .movie-data .favorite-watchlist button {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  padding-left: 3px;
+  padding-top: 5px;
+  background-color: transparent;
+  border: none;
+}
+.movie-card .movie-data .favorite-watchlist button.plus-sign-button {
+  padding-left: 0;
+  padding-top: 3px;
+}
+.movie-card .movie-data .favorite-watchlist button .heart {
+  position: relative;
+  width: 20px;
+  height: 18px;
+}
+.movie-card .movie-data .favorite-watchlist button .heart:before, .movie-card .movie-data .favorite-watchlist button .heart:after {
+  position: absolute;
+  content: "";
+  left: 5px;
+  top: 0;
+  width: 10.4px;
+  height: 16px;
+  background-color: #D4ECDD;
+  border-radius: 5px 5px 0 0;
+  transform: rotate(-50deg);
+  transform-origin: 50% 75%;
+}
+.movie-card .movie-data .favorite-watchlist button .heart:after {
+  transform: rotate(50deg);
+}
+.movie-card .movie-data .favorite-watchlist button .heart.favorite:before, .movie-card .movie-data .favorite-watchlist button .heart.favorite:after {
+  background-color: #fb6376;
+}
+.movie-card .movie-data .favorite-watchlist button .plus-sign {
+  position: relative;
+  width: 20px;
+  height: 18px;
+}
+.movie-card .movie-data .favorite-watchlist button .plus-sign:before, .movie-card .movie-data .favorite-watchlist button .plus-sign:after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 5px;
+  background-color: #D4ECDD;
+}
+.movie-card .movie-data .favorite-watchlist button .plus-sign:before {
+  transform: translate(0, 10px);
+}
+.movie-card .movie-data .favorite-watchlist button .plus-sign:after {
+  transform: rotate(90deg) translate(10px, 0);
+}
+.movie-card .movie-data .favorite-watchlist button .plus-sign.watchlist:before, .movie-card .movie-data .favorite-watchlist button .plus-sign.watchlist:after {
+  background-color: #3a7d44;
+}
+.movie-card .movie-data .star-container {
+  margin-top: 0.25rem;
+  display: flex;
+  justify-content: flex-end;
+}
+.movie-card .movie-data .star-container .star {
+  margin: 5px 0;
+  position: relative;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid #FAF0E6;
+  border-left: 10px solid transparent;
+  transform: rotate(35deg);
+}
+.movie-card .movie-data .star-container .star:before {
+  border-bottom: 8px solid #FAF0E6;
+  border-left: 3px solid transparent;
+  border-right: 3px solid transparent;
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -4.5px;
+  left: -6.5px;
+  display: block;
+  content: "";
+  transform: rotate(-35deg);
+}
+.movie-card .movie-data .star-container .star:after {
+  position: absolute;
+  display: block;
+  top: 0.3px;
+  left: -10.5px;
+  width: 0px;
+  height: 0px;
+  border-right: 10px solid transparent;
+  border-bottom: 7px solid #FAF0E6;
+  border-left: 10px solid transparent;
+  transform: rotate(-70deg);
+  content: "";
+}
+
+@media (min-width: 400px) {
+  .movie-card {
+    flex-direction: row;
+  }
+  .movie-card img {
+    width: 35%;
+    margin-left: 2.5%;
+  }
+}
+@media (min-width: 640px) {
+  .movie-card {
+    min-width: 320px;
+  }
+}
+
+/*# sourceMappingURL=MovieCard.css.map */

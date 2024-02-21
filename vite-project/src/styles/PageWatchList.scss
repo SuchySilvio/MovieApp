@@ -1,0 +1,66 @@
+// Importing variables
+@use 'variables' as *;
+
+// Styling for the page watchlist container
+.page-watchlist-container {
+    margin: 0;
+
+    // Styling for the container when watchlist is empty
+    .empty-watchlist-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 8rem; // Top margin for spacing
+        height: 40vh; // Setting height to 40% of the viewport height
+        row-gap: 1rem; // Gap between rows
+        padding: 0 1.5rem; // Padding for inner content
+
+        // Styling for the instructions when watchlist is empty
+        .watchlist-instructions {
+            display: flex;
+            flex-direction: column;
+            align-items: center; // Centering items vertically
+            row-gap: 1rem; // Gap between rows
+
+            // Media query for screens larger than 540px
+            @media (min-width: 540px) {
+                flex-direction: row; // Change direction to row
+                align-items: flex-start; // Align items at the start
+                justify-content: center; // Center items horizontally
+            }
+
+            // Styling for the plus sign icon
+            .plus-sign {
+                position: relative;
+                width: 20px;
+                height: 18px;
+                margin-right: 1.25rem; // Margin to the right of the plus sign icon
+
+                // Styling for plus sign icon pseudo-elements
+                &:before, &:after {
+                    position: absolute;
+                    content: '';
+                    width: 20px;
+                    height: 5px;
+                    background-color: $unselected-color; // Using unselected color variable
+                }
+
+                &:before {
+                    transform: translate(0, 10px); // Positioning the horizontal line
+                }
+
+                &:after {
+                    transform: rotate(90deg) translate(10px, 0); // Positioning the vertical line
+                }
+
+                &.watchlist:before, &.watchlist:after {
+                    background-color: $plus-sign-color; // Using plus sign color variable
+                }
+            }
+        }
+    }
+
+    // Media query for screens larger than 960px
+    @media (min-width: 960px) {
+        margin-top: 7rem; // Adjusting top margin to prevent overlap with HeaderNav
+    }
+}

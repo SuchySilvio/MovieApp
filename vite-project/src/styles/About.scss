@@ -1,0 +1,9 @@
+// Apply styles only for screens with a minimum width of 960px
+@media (min-width: 960px) {
+    // Select the container for the About section
+    .about-container {
+        // Add top margin to create space from the top of the page
+        // (prevent content from overlapping with HeaderNav component)
+        margin-top: 7rem;
+    }
+}

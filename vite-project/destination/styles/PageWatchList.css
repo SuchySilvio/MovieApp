@@ -1,0 +1,53 @@
+.page-watchlist-container {
+  margin: 0;
+}
+.page-watchlist-container .empty-watchlist-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 8rem;
+  height: 40vh;
+  row-gap: 1rem;
+  padding: 0 1.5rem;
+}
+.page-watchlist-container .empty-watchlist-container .watchlist-instructions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 1rem;
+}
+@media (min-width: 540px) {
+  .page-watchlist-container .empty-watchlist-container .watchlist-instructions {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}
+.page-watchlist-container .empty-watchlist-container .watchlist-instructions .plus-sign {
+  position: relative;
+  width: 20px;
+  height: 18px;
+  margin-right: 1.25rem;
+}
+.page-watchlist-container .empty-watchlist-container .watchlist-instructions .plus-sign:before, .page-watchlist-container .empty-watchlist-container .watchlist-instructions .plus-sign:after {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 5px;
+  background-color: #D4ECDD;
+}
+.page-watchlist-container .empty-watchlist-container .watchlist-instructions .plus-sign:before {
+  transform: translate(0, 10px);
+}
+.page-watchlist-container .empty-watchlist-container .watchlist-instructions .plus-sign:after {
+  transform: rotate(90deg) translate(10px, 0);
+}
+.page-watchlist-container .empty-watchlist-container .watchlist-instructions .plus-sign.watchlist:before, .page-watchlist-container .empty-watchlist-container .watchlist-instructions .plus-sign.watchlist:after {
+  background-color: #3a7d44;
+}
+@media (min-width: 960px) {
+  .page-watchlist-container {
+    margin-top: 7rem;
+  }
+}
+
+/*# sourceMappingURL=PageWatchList.css.map */

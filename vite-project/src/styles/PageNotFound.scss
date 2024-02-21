@@ -1,0 +1,14 @@
+// Styling for the page favorites container
+.page-not-found-container {
+    margin: 0;
+
+    .message {
+        margin-top: 12rem;
+        height: 30vh;
+    }
+
+    // Media query for screens larger than 960px
+    @media (min-width: 960px) {
+        margin-top: 7rem; // Adjusting top margin to prevent overlap with HeaderNav
+    }
+}

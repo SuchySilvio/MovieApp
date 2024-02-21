@@ -1,0 +1,14 @@
+.page-not-found-container {
+  margin: 0;
+}
+.page-not-found-container .message {
+  margin-top: 12rem;
+  height: 30vh;
+}
+@media (min-width: 960px) {
+  .page-not-found-container {
+    margin-top: 7rem;
+  }
+}
+
+/*# sourceMappingURL=PageNotFound.css.map */

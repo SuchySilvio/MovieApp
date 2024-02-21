@@ -1,0 +1,32 @@
+// Define primary color used throughout the application
+$primary-color : #24272c;
+
+// Define secondary color for alternate background or accent
+$secondary-color: #FAF0E6;
+
+// Define tertiary color for another accent color
+$tertiary-color: #92ff92;
+
+// Define color for box shadows
+$box-shadow-color: 	#00e701;
+
+// Define color for stars (for ratings)
+$star-color: #92ff92;
+
+// Define color for unselected or inactive elements
+$unselected-color: #00e701;
+
+$button-color: #00e701; 
+
+// Define color for heart icon (ie. add to favorites)
+$heart-color: #fb6376;
+
+// Define color for plus sign icon (ie. add to watchlist)
+$plus-sign-color: #ffffff;
+
+// Define base transition timing and easing for animations
+$base-transition: all 0.4s ease;
+
+// Define values for full width and partial width
+$full: 100%;
+$partial: 45%;

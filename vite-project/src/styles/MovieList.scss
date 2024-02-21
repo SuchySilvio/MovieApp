@@ -1,0 +1,16 @@
+// Styling for movie list container
+#movie-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Three columns with flexible width */
+    grid-gap: 20px;
+
+    @media screen and (max-width: 1300px) {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for smaller screens */
+    }
+
+    @media screen and (max-width: 900px) {
+        grid-template-columns: 1fr; /* Single column for mobile screens */
+    }
+
+   
+}

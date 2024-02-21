@@ -1,0 +1,63 @@
+// Importing variables
+@use 'variables' as *;
+
+// Styling for the page favorites container
+.page-favorites-container {
+    margin: 0;
+
+    // Styling for the container when favorites are empty
+    .empty-favorites-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 8rem; // Top margin for spacing
+        height: 40vh; // Setting height to 50% of the viewport height
+
+        // Styling for the instructions when favorites are empty
+        .favorites-instructions {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            // Media query for screens larger than 540px
+            @media (min-width: 540px) {
+                flex-direction: row; // Change direction to row
+            }
+
+            // Styling for the heart icon
+            .heart {
+                position: relative;
+                width: 20px;
+                height: 18px;
+                margin: 0 0.5rem; // Margin on left and right sides
+
+                // Styling for heart icon pseudo-elements
+                &:before, &:after {
+                    position: absolute;
+                    content: '';
+                    left: 5px;
+                    top: 0;
+                    width: 10.4px;
+                    height: 16px;
+                    background-color: $unselected-color; // Using unselected color variable
+                    border-radius: 5px 5px 0 0;
+                    transform: rotate(-50deg);
+                    transform-origin: 50% 75%;
+                }
+
+                &:after {
+                    transform: rotate(50deg);
+                }
+
+                &.favorite:before, &.favorite:after {
+                    background-color: $heart-color; // Using heart color variable
+                }
+            }
+        }
+    }
+
+    // Media query for screens larger than 960px
+    @media (min-width: 960px) {
+        margin-top: 7rem; // Adjusting top margin to prevent overlap with HeaderNav
+    }
+}
