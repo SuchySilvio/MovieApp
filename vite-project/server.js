@@ -16,7 +16,6 @@ app.use(express.json());
 app.use(express.static(path.join(__dirname, './dist')));
 
 // Static files and catch-all route should be defined after API routes
-app.use(express.static(path.join(__dirname, './dist')));
 
 // Catch-all handler for serving the React app
 app.get('*', (req, res) => {
