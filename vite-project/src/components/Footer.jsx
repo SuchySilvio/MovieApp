@@ -21,7 +21,7 @@ function Footer () {
             <p>&copy; {currentYear} - Developed by {contributorNames}</p>
 
             {/* Link to the GitHub repository */}
-            <a href="">
+            <a href="https://github.com/SuchySilvio/MovieApp">
                 View the code{/* GitHub logo */}
                 <img src="../public/images/GitHub-logo.png" id="footer-github-icon" alt="Footer github icon"/>
             </a>

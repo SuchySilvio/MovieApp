@@ -5,7 +5,7 @@
   margin: auto auto;
   color-scheme: light dark;
   color: #ffe9f3;
-  background-color: #5C5470;
+  background-color: #0b0e0f;
   text-align: center;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -23,15 +23,18 @@ a:hover {
 }
 
 * {
+  
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
+  height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: #0b0e0f;
   
 }
 
@@ -77,7 +80,14 @@ div {
   background-color: #bbbbbb;
 }
 
-@media (min-width: 960px) {
+@media (min-width: 1200px) {
+  #page-home {
+    margin-top: 7rem;
+  }
+}
+
+
+@media (min-width: 1200px) {
   #page-home {
     margin-top: 7rem;
   }

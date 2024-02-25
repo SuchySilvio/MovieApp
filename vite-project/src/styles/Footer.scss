@@ -10,8 +10,11 @@ footer {
     // Align items along the main axis to the center
     justify-content: center;
 
+
     // Add margin at the bottom of the footer
-    margin-bottom: 10px;
+    margin-bottom: 2rem;
+
+    padding-bottom: 2rem;
 
     // Set the gap between the children elements to 0
     gap: 0px;
@@ -29,6 +32,13 @@ footer {
     a {
         // Remove default text decoration for links
         text-decoration: none;
+
+        
+        background-color: $unselected-color;
+
+        padding: 10px;
+        
+        border-radius: 5px;
 
         // Add top margin to links
         margin-top: 0.5rem;

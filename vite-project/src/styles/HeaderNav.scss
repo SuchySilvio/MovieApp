@@ -26,7 +26,7 @@ header {
   box-shadow: 2px 1px 15px 0px $box-shadow-color;
   display: flex;
   height: 6rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   padding: 2rem 2rem;
   transition: $base-transition;
   width: $full;
@@ -39,7 +39,7 @@ header {
     
     li{
       margin: 0;
-      padding: 0px;
+      padding: 3.8px;
       font-size: 1.1rem;
     }
     
@@ -49,9 +49,12 @@ header {
 
   // Nested selector with class modifier
   &.expanded {
+    height: 100%;
     align-items: flex-start;
     z-index: 3;
   }
+
+  
 
   // Styling for the hamburger menu
   .hamburger-menu {
@@ -170,12 +173,12 @@ header {
   
   // Media query for larger screens
   @media (min-width: 1200px) {
-    left: 50%;
+    display: flex;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;;
     position: fixed;
-    top: 0;
-    transform: translate(-50%);
+    top: 7%;
+    transform: translateY(-50%);
     transition: all 0.2s ease-out;
 
     // Nested selector with class modifier
@@ -183,12 +186,12 @@ header {
       box-shadow: -1px 6px 4px -2px rgba(0, 0, 0, 0.2);
       padding-bottom: 2rem;
       padding-top: 3rem;
-      transform: translateX(-50%) translateY(-20%);
+      transform: translateY(-20%);
     }
 
     // Nested selector with class modifier
     &.hidden {
-      transform: translateX(-50%) translateY(-100%);
+      transform: ranslateY(-100%);
     }
 
     // Styling for the hamburger menu
@@ -219,7 +222,7 @@ header {
             display: block;
             padding: 0.25rem 1rem;
             // Applying mixin with parameters
-            @include nav-link($color: $secondary-color, $hover-color: black);
+            @include nav-link($color: $secondary-color, $hover-color: #00e701);
           }
         }
       }

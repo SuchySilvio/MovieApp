@@ -4,86 +4,100 @@
 
 
 #page-home {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        padding: 20px;
-        font-family: 'Fira Code', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  font-family: 'Fira Code', monospace;
 
-        .line{
-            background-color: black;
-        }
+  .line, .search-bar input {
+    background-color: #191b1f; // Unified background color for elements
+  }
 
-        .search-bar {
-            margin-bottom: 20px;
+  .search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    width: 100%; // Ensures full width usage
+    max-width: 500px; // Maximum width to prevent stretching on larger screens
+    padding: 5px;
+    background-color: #191b1f;
+    border-radius: 20px;
 
-            .search-symbol {
-                color: #fff; // White icon
-                margin-right: 1rem;
-                font-size: x-large; // Larger icon size
-            }
-
-            input {
-                padding: 10px 15px;
-                width: 300px; // Fixed width, adjust as needed
-                border: 1px solid #ccc;
-                border-radius: 5px; // Rounded corners
-                font-family: 'Fira Code', monospace;
-                background-color: #191b1f;
-                font-size: 16px; // Slightly larger text for readability
-                color: #fff; // White text
-
-                &:focus {
-                    border-color: #007bff; // Highlight on focus
-                    outline: none;
-                }
-            }
-        }
-    
-    #category-select-form {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px; // Space between elements
-      margin-bottom: 20px;
-      background-color: $primary-color; // Use primary color for background
-      margin: 1rem 1rem;
-      border-radius: 20px;
-  
-     
-      label {
-        font-size: 18px; // Larger label text
-        display: flex;
-        align-items: center;
-        gap: 10px; // Space between label text and selects
-        
-      }
-      
-      select {
-        padding: 8px 10px;
-        border-radius: 5px;
-        border: 1px solid #ccc;
-        color: #fff; // White text
-        background-color: #191b1f;
-        font-size: 16px;
-        cursor: pointer; // Pointer cursor on hover
-        
-        &:focus {
-          border-color: #007bff;
-          outline: none;
-        }
-      }
+    .search-symbol {
+      color: #fff; // White icon
+      margin-right: 10px; // Consistent margin
+      font-size: 24px; // Use px for font-size for consistency
     }
-    
-    .line {
-      width: 80%;
-      border-bottom: 1px solid $box-shadow-color; // Subtle line separator
-      box-shadow: 2px 1px 15px 2px $box-shadow-color;
-      margin: 20px 0; // Spacing above and below the line
+
+    input {
+      flex-grow: 1; // Allows input to fill available space
+      padding: 5px;
+      border: none; // Removes border
+      border-radius: 5px; // Rounded corners for input
+      font-family: 'Fira Code', monospace;
+      font-size: 16px; // Consistent font size
+      color: #fff; // White text
+
+      &:focus {
+        outline: none; // Removes outline on focus
+        border-color: #007bff;
+      }
     }
   }
-  
-  // Styling for MovieList component can be added here, 
-  // assuming it maintains its own encapsulated styles for movie items.
-  
+  #category-select-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; // Space between elements
+    margin-bottom: 20px;
+    background-color: $primary-color; // Use primary color for background
+    margin: 1rem 1rem;
+    border-radius: 20px;
+
+    label {
+      font-size: 18px; // Larger label text
+      display: flex;
+      align-items: center;
+      gap: 10px; // Space between label text and selects
+    }
+
+    select {
+      padding: 8px 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      color: #fff; // White text
+      background-color: #191b1f;
+      font-size: 16px;
+      cursor: pointer; // Pointer cursor on hover
+
+      &:focus {
+        border-color: #007bff;
+        outline: none;
+      }
+    }
+
+    // Media query for mobile devices
+    @media (max-width: 768px) {
+      flex-direction: column; // Stack elements vertically on smaller screens
+      align-items: stretch; // Stretch items to fill the container width
+
+      label {
+        flex-direction: column; // Stack label contents vertically
+        text-align: center; // Center-align the text for a neater appearance
+      }
+    }
+  }
+
+  .line {
+    width: 80%;
+    border-bottom: 1px solid $box-shadow-color; // Subtle line separator
+    box-shadow: 2px 1px 15px 2px $box-shadow-color;
+    margin: 20px 0; // Spacing above and below the line
+  }
+}
+
+
+// Styling for MovieList component can be added here, 
+// assuming it maintains its own encapsulated styles for movie items.

@@ -6,6 +6,7 @@ const apiKey = import.meta.env.VITE_TMDB_API_KEY;
 // Base URL for TMDB API
 const baseUrl = 'https://api.themoviedb.org/3';
 
+
 // Fetch popular movies
 export const fetchPopularMovies = async () => {
   try {
@@ -39,10 +40,22 @@ export const fetchTopRatedMovies = async () => {
   }
 };
 
-// Fetch now-playing movies
+export const fetchUpcomingMovies = async () => {
+  try {
+    const today = new Date().toISOString().split('T')[0]; // Get today's date in the required format
+    const res = await axios.get(`${baseUrl}/movie/upcoming?api_key=${apiKey}&primary_release_date.gte=${today}&region=US`);
+    return res.data.results;
+  } catch (error) {
+    console.error('Error fetching upcoming movies:', error);
+    return [];
+  }
+};
+
+
 export const fetchNowPlayingMovies = async () => {
   try {
-    const res = await axios.get(`${baseUrl}/movie/now_playing?api_key=${apiKey}`);
+    // Optionally add &region=US if you wish to consistently filter by region
+    const res = await axios.get(`${baseUrl}/movie/now_playing?api_key=${apiKey}&region=US`);
     return res.data.results;
   } catch (error) {
     console.error('Error fetching now-playing movies:', error);
@@ -50,16 +63,9 @@ export const fetchNowPlayingMovies = async () => {
   }
 };
 
-// Fetch upcoming movies
-export const fetchUpcomingMovies = async () => {
-  try {
-    const res = await axios.get(`${baseUrl}/movie/upcoming?api_key=${apiKey}`);
-    return res.data.results;
-  } catch (error) {
-    console.error('Error fetching upcoming movies:', error);
-    return [];
-  }
-};
+
+
+
 
 export const fetchMoviesByCategoryAndYear = async (category, year) => {
   try {

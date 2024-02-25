@@ -24,8 +24,7 @@ img {
 #movie-details-wrapper {
     display: flex;
     flex-direction: column;
-    padding: 0 1rem;
-
+    padding: 1rem;
     // Styling for the favorite and watchlist section
     .favorite-watchlist {
         display: flex;
@@ -219,6 +218,10 @@ img {
         }
     }
 }
+#movie-details-data{
+    padding:2rem;
+    gap: 1rem;
+}
 
 // Media query for screens larger than 768px
 @media (min-width: 768px) {
@@ -230,6 +233,7 @@ img {
             display: flex;
             flex-direction: column;
             justify-content: center;
+           
 
             button {
                 height: 100%;
@@ -243,6 +247,7 @@ img {
 // Media query for screens larger than 960px
 @media (min-width: 960px) {
     #details-wrapper {
-        margin-top: 7rem;
+        margin-top: 8rem;
+        padding-bottom: 2rem; // Adjusting top margin to prevent overlap with HeaderNav
     }
 }
