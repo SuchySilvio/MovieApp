@@ -9,6 +9,7 @@
 
     // Media query for screens larger than 960px
     @media (min-width: 960px) {
-        margin-top: 7rem; // Adjusting top margin to prevent overlap with HeaderNav
+        margin-top: 8rem;
+        padding-bottom: 2rem; // Adjusting top margin to prevent overlap with HeaderNav
     }
 }
