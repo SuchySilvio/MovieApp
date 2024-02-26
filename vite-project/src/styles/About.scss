@@ -1,9 +1,47 @@
-// Apply styles only for screens with a minimum width of 960px
-@media (min-width: 960px) {
-    // Select the container for the About section
+// Importing variables
+@use 'variables' as *;
+
+#about-div {
+    text-align: left; // Align text to the left
+    margin-top: 2rem; // Adding top margin
+
+    @media (min-width: 960px) {
+        margin-top: 8rem; // Adjusting top margin for larger screens
+    }
+
+    #about-title-div {
+        display: flex;
+        flex-direction: column;
+        height: 5rem;
+        
+        #about-title {
+            text-align: center; // Centering the text
+        }
+    }
+
     .about-container {
-        // Add top margin to create space from the top of the page
-        // (prevent content from overlapping with HeaderNav component)
-        margin-top: 8rem;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 3.125rem; // Gap between grid items
+        width: 90%;
+        margin: 3.625rem auto;
+
+        @media (min-width: 640px) {
+            display: grid;
+            grid-template-columns: repeat(2, 45%); // Two columns layout for larger screens
+        }
+
+        #tmdb-link {
+            color: $box-shadow-color; // Using box-shadow color variable
+
+            &:hover {
+                color: $plus-sign-color; // Changing color on hover to plus sign color
+                font-weight: bold; // Adding bold font weight on hover
+            }
+        }
+
+        img {
+            width: 10.625rem; // Setting width for images
+        }
     }
 }

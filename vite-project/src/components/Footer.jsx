@@ -1,6 +1,10 @@
 // Import package.json from the parent directory
 import packageJson from '../../package.json';
 
+// Import the image at the top of your file
+import githubLogo from "../../public/images/GitHub-logo.png";
+
+
 // Import SCSS styles for the Footer component
 import '../styles/Footer.scss';
 
@@ -23,7 +27,7 @@ function Footer () {
             {/* Link to the GitHub repository */}
             <a href="https://github.com/SuchySilvio/MovieApp">
                 View the code{/* GitHub logo */}
-                <img src="../public/images/GitHub-logo.png" id="footer-github-icon" alt="Footer github icon"/>
+                <img src={githubLogo} id="footer-github-icon" alt="Footer GitHub icon" />
             </a>
         </footer>
     )
