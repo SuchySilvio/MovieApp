@@ -1,4 +1,0 @@
-root: C:\Users\Suchy\Downloads\Movie\MovieApp\vite-project 
-path: C:\Program Files\nodejs 
-arch: 64 
-proxy: none
