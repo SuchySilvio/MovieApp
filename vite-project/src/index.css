@@ -81,16 +81,12 @@ div {
 
 @media (min-width: 1200px) {
   #page-home {
-    margin-top: 7rem;
+    margin-top: 11rem;
   }
 }
 
 
-@media (min-width: 1200px) {
-  #page-home {
-    margin-top: 7rem;
-  }
-}
+
 
 @media (prefers-color-scheme: light) {
   :root {

@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
+#page-home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-top: 100px;
+  font-family: "Fira Code", monospace;
+}
+#page-home .line, #page-home .search-bar input {
+  background-color: #191b1f;
+}
+#page-home .search-bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 500px;
+  padding: 5px;
+  background-color: #191b1f;
+  border-radius: 20px;
+}
+#page-home .search-bar .search-symbol {
+  color: #fff;
+  margin-right: 10px;
+  font-size: 24px;
+}
+#page-home .search-bar input {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: #fff;
+}
+#page-home .search-bar input:focus {
+  outline: none;
+  border-color: #007bff;
+}
+#page-home #category-select-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+  background-color: #24272c;
+  margin: 1rem 1rem;
+  border-radius: 20px;
+}
+#page-home #category-select-form label {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+#page-home #category-select-form select {
+  padding: 8px 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  color: #fff;
+  background-color: #191b1f;
+  font-size: 16px;
+  cursor: pointer;
+}
+#page-home #category-select-form select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+@media (max-width: 768px) {
+  #page-home #category-select-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  #page-home #category-select-form label {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+#page-home .line {
+  width: 80%;
+  border-bottom: 1px solid #00e701;
+  box-shadow: 2px 1px 15px 2px #00e701;
+  margin: 20px 0;
+}
+
+/*# sourceMappingURL=PageHome.css.map */
